@@ -1,0 +1,135 @@
+:root {
+  --non-photo-blue: hsl(194, 94%, 81%);
+  --pale-dogwood: hsl(16, 53%, 77%);
+  --pale-dogwood-dark: hsl(16, 53%, 7%);
+  --oxford-blue: hsl(213, 96%, 11%);
+  --oxford-blue-light: hsl(213, 96%, 50%);
+  --maize: hsl(56, 78%, 62%);
+}
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: var(--pale-dogwood-dark);
+  padding: 5px;
+}
+
+h1 {
+  text-align: center;
+  color: orange;
+}
+
+button {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: .875rem;
+  padding: 15px 50px;
+  background-color: var(--oxford-blue-light);
+  border: none;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+  
+}
+
+button:hover {
+  background-color: hsl(160, 70%, 65%);
+}
+
+.container {
+  width: clamp(300px, 90%, 600px);
+  height: 100vh;
+  margin: 0 auto;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-box {
+  height: 179px;
+  width: 70%;
+  margin: 10px 0 40px;
+  background: url("public/Cool_with_shades.jpg") no-repeat center/contain;
+
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.names {
+  margin-bottom: 30px;
+}
+
+.more-info {
+  margin-block: 30px;
+  width: clamp(80%, 100% ,70%);
+}
+
+.more-info ul {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: .625rem;
+  background-color: var(--non-photo-blue);
+  height: 200px;
+  padding: 5px 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  opacity: 0;
+}
+
+.more-info ul.expanded {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.more-info ul li {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-block: 3px;
+  padding: 3px 0;
+}
+
+.more-info ul li:hover {
+  background-color: var(--maize);
+}
+
+.more-info ul li.expanded {
+  width: 100%;
+}
+
+.more-info ul li.expanded:nth-of-type(1) {
+  transition: width 2s ease-in-out 1s;
+}
+
+.more-info ul li.expanded:nth-of-type(2) {
+  transition: width 2s ease-in-out 3s;
+}
+
+.more-info ul li.expanded:nth-of-type(3) {
+  transition: width 2s ease-in-out 5s;
+}
+
+.more-info ul li.expanded:nth-of-type(4) {
+  transition: width 2s ease-in-out 7s;
+}
+
+.more-info ul li.expanded:nth-of-type(5) {
+  transition: width 2s ease-in-out 9s;
+}
+
