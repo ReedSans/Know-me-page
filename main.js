@@ -4,6 +4,6 @@ let isShown = false
 
 seeMoreBtn.addEventListener('click', () => {
   isShown = !isShown
-  seeMoreBtn.innerText = isShown ? "SEE LESS" : "SEE MORE"
+  seeMoreBtn.innerText = isShown ? "VIEW LESS" : "VIEW MORE"
   Array.from(detailsElements).forEach(element => element.classList.toggle('expanded'))
 })

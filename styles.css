@@ -57,16 +57,17 @@ button:hover {
 }
 
 .image-box {
-  height: 179px;
-  width: 70%;
-  margin: 10px 0 40px;
-  background: url("public/Cool_with_shades.jpg") no-repeat center/contain;
-
+  height: 230px;
+  width: 50%;
+  margin: 10px 0 20px;
+  /* padding: 0 auto; */
+  /* background: url("public/Cool_with_shades.jpg") no-repeat center/contain; */
 }
 
 .image-box img {
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
+  margin: 0 auto;
 }
 
 .names {
@@ -74,7 +75,7 @@ button:hover {
 }
 
 .more-info {
-  margin-block: 30px;
+  margin: 30px 0;
   width: clamp(80%, 100% ,70%);
 }
 
@@ -83,13 +84,13 @@ button:hover {
   font-weight: 600;
   font-size: .625rem;
   background-color: var(--non-photo-blue);
-  height: 270px;
-  padding: 5px 15px;
+  height: 230px;
+  padding: 10px 15px;
   border-radius: 3px;
   text-align: center;
   display: grid;
   grid-template-rows: repeat(5, 1fr);
-  gap: 3px;
+  gap: 10px;
   opacity: 0;
 }
 
@@ -101,9 +102,16 @@ button:hover {
 .more-info ul li {
   width: 0;
   overflow: hidden;
-  white-space: wrap;
+  white-space: nowrap;
   margin-block: 3px;
   padding: 3px 0;
+}
+
+ /* MEDIA QUERY TO ALLOW TEXT-WRAPPING */
+@media (width < 400px) {
+  .more-info ul li {
+    white-space: wrap;
+  }
 }
 
 .more-info ul li:hover {
